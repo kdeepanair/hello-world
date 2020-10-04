@@ -10,5 +10,9 @@
   print date("g:i A l, F j Y.");
  ?>
  </p>
+ <?php
+  $webhost = $_SERVER['HOSTNAME'];
+  print "This is the webhostname $webhost";
+ ?>
  </body>
 </html>
