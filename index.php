@@ -12,6 +12,9 @@
  </p>
  <?php
   $webport = $_SERVER['RDS_PORT'];
+  $Database = $_SERVER['RDS_HOSTNAME'];
+  $DBUser = $_SERVER['RDS_USERNAME'];
+  $DBPassword = $_SERVER['RDS_PASSWORD'];
   print "This is the webhostname $webport";
   $dbconnection = mysql_connect($Database, $DBUser, $DBPassword) or die("Could not connect: " . mysql_error());  
    if($dbconnection){
