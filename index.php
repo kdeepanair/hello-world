@@ -21,7 +21,16 @@
       print "Connected to aurora successfully";
     } else {
       echo "Error creating table: " . mysql_error($dbconnection);
-    }   
+    }  
+  $dbselected = mysql_select_db("OctankDB");
+  $queryretrieve = "SELECT * FROM products";
+      $result = mysql_query($queryretrieve, $dbconnection);
+        echo $result;
+        while($row = mysql_fetch_array($result)){
+        echo $row['name'];
+        echo $row['description'];
+        }
+
  mysql_close($dbconnection);
  ?>
  </body>
