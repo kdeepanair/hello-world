@@ -11,8 +11,8 @@
  ?>
  </p>
  <?php
-  $webhost = $_SERVER['HOSTNAME'];
-  print "This is the webhostname $webhost";
+  $webport = $_SERVER['RDS_PORT'];
+  print "This is the webhostname $webport";
  ?>
  </body>
 </html>
