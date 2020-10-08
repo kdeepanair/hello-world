@@ -4,7 +4,6 @@
    <title>Octank Product Corporation</title>
    <link rel="stylesheet" type="text/css" href="css/style.css">
    <link href="css/bootstrap.min.css" rel="stylesheet">
-   <style>body {margin-top: 40px; background-color: #333;}</style>
  </head>
  
  <body>
@@ -34,7 +33,7 @@
   $Database = $_SERVER['RDS_HOSTNAME'];
   $DBUser = $_SERVER['RDS_USERNAME'];
   $DBPassword = $_SERVER['RDS_PASSWORD'];
-  print "This is the webhostname $webport";
+
   $dbconnection = mysql_connect($Database, $DBUser, $DBPassword) or die("Could not connect: " . mysql_error());  
    if($dbconnection){
       print "Connected to aurora successfully";
