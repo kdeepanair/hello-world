@@ -6,28 +6,30 @@
    <link href="css/bootstrap.min.css" rel="stylesheet">
  </head>
  
- <body>
- <h1>Octank Product Catalog</h1>
- <p/>
- <?php
-  print "The Current Date and Time is: <br/>";
-  print date("g:i A l, F j Y.");
- ?>
- </p>
+  <body>
+   <div class="container">
+	   <div class="hero-unit">
+		   <h1>Octank Product Catalog</h1>
+		   <p>
+		      <?php
+				     print "The Current Date and Time is: <br/>";
+				     print date("g:i A l, F j Y.");
+		      ?>
+		   </p>
  <!--Get instance metadata-->
-  <?php
-                        echo "Getting the curl handle";
-                        $curl_handle=curl_init();
-                        curl_setopt($curl_handle,CURLOPT_CONNECTTIMEOUT,2);
-                        curl_setopt($curl_handle,CURLOPT_RETURNTRANSFER,1);
-                        curl_setopt($curl_handle,CURLOPT_URL,'http://169.254.169.254/latest/meta-data/instance-id');
-                        $instanceId = curl_exec($curl_handle);
-                        if (empty($instanceId)){
-                          print "Sorry, for some reason, we got no hostname back <br />";
-                        } else {
-                          print "Server = " . $instanceId . "<br />";
-                        }
- ?>
+		   <?php
+      echo "Getting the curl handle";
+      $curl_handle=curl_init();
+      curl_setopt($curl_handle,CURLOPT_CONNECTTIMEOUT,2);
+      curl_setopt($curl_handle,CURLOPT_RETURNTRANSFER,1);
+      curl_setopt($curl_handle,CURLOPT_URL,'http://169.254.169.254/latest/meta-data/instance-id');
+      $instanceId = curl_exec($curl_handle);
+      if (empty($instanceId)){
+        print "Sorry, for some reason, we got no hostname back <br />";
+      } else {
+        print "Server = " . $instanceId . "<br />";
+      }
+		   ?>
  <?php
   $webport = $_SERVER['RDS_PORT'];
   $Database = $_SERVER['RDS_HOSTNAME'];
