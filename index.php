@@ -23,7 +23,7 @@
                         } else {
                           print "Server = " . $instanceId . "<br />";
                         }
- 
+ ?>
  <?php
   $webport = $_SERVER['RDS_PORT'];
   $Database = $_SERVER['RDS_HOSTNAME'];
