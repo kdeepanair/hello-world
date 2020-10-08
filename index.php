@@ -4,6 +4,7 @@
    <title>Octank Product Corporation</title>
    <link rel="stylesheet" type="text/css" href="css/style.css">
    <link href="css/bootstrap.min.css" rel="stylesheet">
+   <style>body {margin-top: 40px; background-color: #533;}</style>
  </head>
  
   <body>
@@ -12,12 +13,12 @@
 		   <h1>Octank Product Catalog</h1>
 		   <p>
 		      <?php
-				     print "The Current Date and Time is: <br/>";
-				     print date("g:i A l, F j Y.");
+			print "The Current Date and Time is: <br/>";
+			print date("g:i A l, F j Y.");
 		      ?>
 		   </p>
  <!--Get instance metadata-->
-		   <?php
+<?php
       echo "Getting the curl handle";
       $curl_handle=curl_init();
       curl_setopt($curl_handle,CURLOPT_CONNECTTIMEOUT,2);
@@ -28,8 +29,7 @@
         print "Sorry, for some reason, we got no hostname back <br />";
       } else {
         print "Server = " . $instanceId . "<br />";
-      }
-		   ?>
+   ?>
  <?php
   $webport = $_SERVER['RDS_PORT'];
   $Database = $_SERVER['RDS_HOSTNAME'];
