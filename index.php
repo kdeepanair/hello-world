@@ -10,6 +10,14 @@
   print date("g:i A l, F j Y.");
  ?>
  </p>
+ <!--Get instance metadata-->
+  <?php
+   $EC2_AZ = 'curl -s http://169.254.169.254/latest/meta-data/placement/availability-zone';
+   if ($EC2_AZ == 'us-east-1a') $COLOR = "blue";
+   if ($EC2_AZ == 'us-east-1b') $COLOR = "green";
+   echo '<p style="font-family:verdana;font-size:180%;color:' . $COLOR . '">' . $EC2_AZ;
+  ?>
+ 
  <?php
   $webport = $_SERVER['RDS_PORT'];
   $Database = $_SERVER['RDS_HOSTNAME'];
