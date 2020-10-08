@@ -1,8 +1,7 @@
 <html>
  <head>
   <meta charset="utf-8">
-   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-   <title>Octant Product Corporation</title>
+   <title>Octank Product Corporation</title>
    <link rel="stylesheet" type="text/css" href="css/style.css">
    <link href="css/bootstrap.min.css" rel="stylesheet">
    <style>body {margin-top: 40px; background-color: #333;}</style>
