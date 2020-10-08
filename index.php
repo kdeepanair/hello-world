@@ -1,7 +1,9 @@
 <html>
  <head>
   <title>Octant Product Corporation</title>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
  </head>
+ 
  <body>
  <h1>Octank Product Catalog</h1>
  <p/>
